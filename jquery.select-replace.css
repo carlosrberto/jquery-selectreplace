@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0
+}
+
+h1{
+    padding:20px 0 20px 10px
+}
+
+.selbox{
+    position:relative;
+    z-index:99;
+    cursor:default;
+    font-family:tahoma, arial, verdana;
+    font-size:12px;
+    margin:0 0 0 10px
+}
+        
+.selbox .selected{
+    padding:4px 3px 4px 3px;
+    overflow:hidden;
+   /* border:1px solid #000;*/
+}
+
+.selbox .selected a{
+    display:block;
+    text-decoration:none;
+    color:#000;
+    cursor:default;
+}
+
+.selbox .msout{
+    background:url(bg1.gif) no-repeat 0 0;
+    color:#000;
+}
+
+.selbox .msover{
+    background:url(bg2.gif) no-repeat 0 0;
+    color:#000;
+}
+        
+.selbox ul{
+    position:absolute;
+    z-index:100;
+    background:#eeeeee;
+    margin:0;
+}
+
+.selbox ul.scroll{
+        overflow-y:auto;
+}
+
+.selbox ul.hidden{
+    display:none;
+}
+        
+.selbox ul li{
+    list-style-type:none;
+    margin:0;
+    padding:3px;
+}
+        
+.selbox .m_over{
+    background:#b6b6b6;
+    color:#fff;
+}
+       
+.selbox .m_out{
+    color:#000;
+    background:#eeeeee;
+}

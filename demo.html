@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>jQuery Select Replace</title>
+    <link type="text/css" rel="stylesheet" media="all" href="jquery.select-replace.css" />
+    <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+    <script type="text/javascript" src="jquery.select-replace.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $("#demo").selectreplace({borderSize:2});
+          
+          $("#demo").live('change', function(){
+                $("#demo2").empty().append('<option>Teste maldito</option><option>Teste maldito 2</option><option>Teste maldito 2</option>').selectreplace({scrollAfter:8, forceZindex:201});
+                $("#demo2").next().next().remove();
+          });
+          $("#demo2").selectreplace({scrollAfter:8});
+          
+          $("#demo2").live('change', function() {
+              alert($(this).val());
+          });
+          
+          $("#demo3").selectreplace({scrollAfter:19});
+          
+          $("#teste").keydown(function( e ){
+            //alert(e.target.nodeName)
+          });
+          
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>jQuery Select Replace</h1>
+        
+        <a href="#" id="teste">Link de Teste</a>
+        
+        <label for="">Label de Options</label>
+        <select name="teste" id="demo">
+            <option>Primeira op&ccedil;&atilde;o</option>
+            <option>Segunda op&ccedil;&atilde;o</option>
+            <option>Terceira op&ccedil;&atilde;o com um texto realmente grande</option>
+            <option>Primeira op&ccedil;&atilde;o</option>
+            <option>Segunda op&ccedil;&atilde;o</option>
+            <option>Terceira op&ccedil;&atilde;o</option>
+            <option>Primeira op&ccedil;&atilde;o</option>
+            <option>Segunda op&ccedil;&atilde;o</option>
+            <option>Terceira op&ccedil;&atilde;o</option>
+        </select>
+
+        <label for="">Label de Options 2</label>        
+        <select name="teste" id="demo2">
+            <option>Option 0</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+            <option>Option 6</option>
+            <option>Option 7</option>
+            
+            
+        </select>
+        
+
+        <label for="">Label de Options 3</label>        
+        <select name="teste" id="demo3">
+            <option>Option 0</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+            <option>Option 6</option>
+            <option>Option 7</option>
+            <option>Option 8</option>
+            <option>Option 9</option>
+            <option>Option 10</option>
+            <option>Option 11</option>
+            <option>Option 12</option>
+            <option>Option 13</option>
+            <option>Option 14</option>
+            <option>Option 15</option>
+            <option>Option 16</option>
+            <option>Option 17</option>
+            <option>Option 18</option>
+            <option>Option 19</option>
+            <option>Option 20</option>
+        </select>
+
+        <label for="">Label de Options 4</label>        
+        <select name="teste" id="demo4">
+            <option>Option 0</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+            <option>Option 6</option>
+            <option>Option 7</option>
+            <option>Option 8</option>
+            <option>Option 9</option>
+            <option>Option 10</option>
+            <option>Option 11</option>
+            <option>Option 12</option>
+            <option>Option 13</option>
+            <option>Option 14</option>
+            <option>Option 15</option>
+            <option>Option 16</option>
+            <option>Option 17</option>
+            <option>Option 18</option>
+            <option>Option 19</option>
+            <option>Option 20</option>
+        </select>
+        
+    </div>
+</body>
+</html>
